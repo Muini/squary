@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+        <title>Squary</title>
+        <link rel="stylesheet" type="text/css" href="css/prism.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div class="logo-container">
+            <img class="logo" src="img/logo.svg" />
+            <h1>SQUARY.JS</h1>
+        </div>
+        <h2>A Little JavaScript Square Grid System</h2>
+
+        <section class="main">
+
+        <section class="exemples">
+            <nav class="nav">
+                <ul>
+                    <li><a onclick="squaryGrid.filter('all');">All</a></li>
+                    <li><a onclick="squaryGrid.filter('fraise');">Fraise</a></li>
+                    <li><a onclick="squaryGrid.filter('cerise');">Cerise</a></li>
+                    <li><a onclick="squaryGrid.filter('cassis');">Cassis</a></li>
+                </ul>
+            </nav>
+
+            <section class="news_wall">
+
+                <article squary-filter="cassis" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="fraise" squary-size="4x2" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="cerise" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="cerise" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="fraise" squary-size="2x2" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="cassis" squary-size="2x2" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="cassis" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="cerise" squary-size="3x1" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="fraise" squary-size="2x2" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="fraise" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="cerise" squary-size="1x2" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="fraise" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="cassis" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="fraise" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+                <article squary-filter="fraise" class="no_news">
+                    <img src="img/logo.svg" alt="Squary Icon" />
+                </article>
+
+                </article>
+
+            </section>
+        </section>
+
+        <section class="explanations">
+            <h3>Introduction</h3>
+            <p>Welcome to <b>Squary.js</b>, </p>
+            <p>The little <b>Free JavaScript library</b> that will help you making <b>Isotope-like</b> grid system.</p>
+            <p>It can be use for news system, events or any list item you want. It's <b>easy to use</b>, <b>fast to setup</b> and <b>customizable</b>.</p>
+
+            <h3>Features & Limitations</h3>
+            <div class="col">
+                <p><b>Advantages</b></p>
+                <ul>
+                    <li>Flexible & Customizable</li>
+                    <li>Easy to setup & use</li>
+                    <li>Super Fast & Super Light</li>
+                    <li>Filtering options</li>
+                    <li>Totally responsive</li>
+                    <li>Compatibility : IE9+ / Chrome / Firefox / Safari</li>
+                    <li>Completly Free & Open Source</li>
+                </ul>
+            </div>
+            <div class="col">
+                <p><b>Limitations</b></p>
+                <ul>
+                    <li>Still in developement, early version</li>
+                    <li>Basic, no advanced usage</li>
+                    <li>Only on modern browsers</li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <h3>Installation</h3>
+            <p>Download the <a><b>minified version</b></a> or the <a><b>dev version</b></a>.</p>
+            <p>Include your squary.js | squary.min.js at the bottom of your html file like following :</p>
+            <p><pre><code class="language-markup">&lt;script type="text/javascript" src="squary.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="yourcode.js"&gt;&lt;/script&gt;</code></pre></p>
+            <p>And that's all !</p>
+            <p class="note"><b>Dev Note :</b> The bower package is coming.</p>
+
+            <h3>Getting started</h3>
+            <p>To setup your Squary Grid, you will need to have a container which will be your Grid and children which will be your Elements.</p>
+            <p>You will define the container as a Squary Grid and then Squary.js will automatically take all his children as block of the grid.</p>
+            <p><pre><code class="language-markup">&lt;section class="my-container"&gt;
+    &lt;article class="child"&gt;&lt;/article&gt;
+    &lt;article class="child"&gt;&lt;/article&gt;
+    &lt;article class="child"&gt;&lt;/article&gt;
+&lt;/section&gt;</code></pre></p>
+            <p>Alright for the HTML part, then you need to setup with JavaScript like following :</p>
+<p><pre><code class="language-javascript">var squaryGrid = Object.create(Squary);
+squaryGrid.new(
+    ".my-container", //   Container class
+    6,             //   Resolution
+    false,          //   Randomize
+    0.3,           //    Transition time
+    true,          //    Pixel Correction
+    function(){}     //   Callback
+);</code></pre></p>
+            <p>Let's see what <b>parameters</b> are here and how you can <b>customize your grid</b> :</p>
+            <ul>
+                <li><b>Container class :</b> Put the selector (only one element) of the container, every child will be elements of the grid, little children are not affected.</li>
+                <li><b>Resolution :</b> This is the density of the grid based on the width of the container. More upper value means more blocks per line. Technically blocks will always have almost the same size.</li>
+                <li><b>Randomize :</b> Shuffle all children if true.</li>
+                <li><b>Transition time :</b> The transition time for all animations. 0 means no animations.</li>
+                <li><b>Pixel Correction :</b> Try with and without, it will add 1 pixel to the width and the height of each block to reduce gap between them.</li>
+                <li><b>Callback :</b> Function that will be called at the end of the initialisation of the grid.</li>
+            </ul>
+            <p>Of course you can setup multiple grid in your page.</p>
+            <p class="note"><b>Note :</b> Each block has a width and a height setup with JavaScript, so be careful with the content.</p>
+            <p class="center"><b>At this moment, your grid will already work !</b></p>
+
+            <h3>Attributes</h3>
+            <p>But did you notice ? Every block has the same 1x1 size ! Boring...</p>
+            <p>This is where <b>attributes</b> comes ! They need to be place <b>on the child</b> (here our article element)</p>
+            <ul>
+                <li><b>squary-size="2x3"</b> : You can setup the size of a block like : 1x2, 2x1, 3x1, 3x2, 4x2 ... you get it. By default and if this attribute is not existing, every blocks will be 1x1.</li>
+                <li><b>squary-filter="something"</b> : It will add a filter to the block, then you can easily filter them with the method <pre>.filter()</pre> described below.</li>
+                <li><b>squary-hidden="true"</b> : It will completely hide the block.</li>
+            </ul>
+
+            <h3>Methods</h3>
+            <p>Let's see now, how we can interact with all this.</p>
+            <p>The method are called on an Squary instance only. Create one like this : <pre><code class="language-javascript">var calledLikeYouWant = Object.create(Squary);</code></pre></p>
+            <ul>
+                <li><b><pre>.new(String container,
+            int resolution,
+            bool randomize,
+            int transitionTime,
+            bool pixelCorrection,
+            function callback)</pre></b> : The method that initialize the grid, should be use only once on a Squary instance. See upper for the parameters.</li>
+                <li><b><pre>.refresh()</pre></b> : It will refresh the grid. In case you modify the DOM of the grid's elements or resize the container.</li>
+                <li><b><pre>.onClick(function something)</pre></b> : Add a function that is called when a click is triggered on a block. It will be the same function for every block.</li>
+                <li><b><pre>.filter(String aFilter)</pre></b> : It will keep only the block with the attribute squary-filter="aFilter" It will refresh the grid with the new elements. Call .filter("all") to show every elements.</li>
+                <li><b><pre>.getBlock(int i)</pre></b> : Return the block element with the index i. Start at 0.</li>
+                <li><b><pre>.setResolution(int i)</pre></b> : Modify the grid resolution and then refresh.</li>
+                <li><b><pre>.setTransitionTime(int i)</pre></b> : Modify the transition time of animations and then refresh.</li>
+            </ul>
+            <p class="note"><b>Note :</b> All those methods are chainable.</p>
+
+            <h3>Futur improvements</h3>
+            <ul>
+                <li>Customizable Intro Animations</li>
+                <li>More filtering options like range | multi-filter</li>
+                <li>Better compatibility with existing CSS</li>
+                <li>Improve core algorithm</li>
+                <li>Better compatibility with old browsers</li>
+                <li>Non squary height of blocks</li>
+            </ul>
+            <p></p>
+            <p class="center"><b>That's all folks ! If you do something cool with it, don't hesitate to warn me !</b></p>
+            <p class="center"><b>You can follow me on <a href="http://twitter.com/CorentinFlach" target="_blank">twitter</a> & <a href="http://github.com/muini" target="_blank">github</a> for updates !</b></p>
+
+        </section>
+
+        </section>
+
+        <footer class="footer">
+            <p>Squary.js &lt;/&gt; with ♥ by <a href="http://corentinflach.fr/" target="_blank">Corentin Flach</a></p>
+        </footer>
+
+    </body>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/squary.min.js"></script>
+    <script type="text/javascript">
+
+        var squaryGrid = Object.create(Squary);
+        squaryGrid.new(
+            ".news_wall", //Container class | only one !
+            12, //Resolution
+            false, //Randomize
+            0.3, //Transition time
+            true, //Pixel Correction
+            function(){ console.log("Finished!"); } //Callback when finished
+        );
+
+        //Bind the click on an item
+        squaryGrid.onClick(function(){
+            //Let's put some fun
+            if(this.hasAttribute("squary-size"))
+            {
+                this.removeAttribute("squary-size");
+            }else{
+                var random = parseInt(Math.random() * (4 - 1) + 1);
+                var random2 = parseInt(Math.random() * (4 - 1) + 1);
+                this.setAttribute("squary-size", random+"x"+random2 );
+            }
+
+            squaryGrid.refresh();
+
+        });
+
+        //Filtering easily !
+        // all : Draw all the block
+        //squaryGrid.filter("all");
+
+
+    </script>
+</html>

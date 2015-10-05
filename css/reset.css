@@ -1,0 +1,114 @@
+/*
+*===================================
+*    RESET
+*===================================
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    vertical-align: baseline;
+    box-sizing : border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+}
+html{
+    height: 100%;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color : $lightgray;
+    width: 100%;
+    height: 100%;
+    color: $darkgray;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media print {
+    blockquote,p {
+        orphans: 2;
+        widows: 2;
+    }
+
+    blockquote,ol,ul {
+        page-break-inside: avoid;
+    }
+
+    caption,h1,h2,h3 {
+        page-break-after: avoid;
+    }
+}
+
+@-ms-viewport {
+    width:device-width;zoom:1;
+}
+
+@-o-viewport {
+    width:device-width;zoom:1;
+}
+
+@viewport {
+    width:device-width;zoom:1;
+}
+
+a img {
+    border: 0;
+}
+
+body>script {
+    display: none!important;
+}
