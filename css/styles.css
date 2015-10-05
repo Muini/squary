@@ -17,6 +17,7 @@ body,html{
     margin-top: 40px;
 }
 .logo-container{
+    display: block;
     background: #731630;
     width: 200px;
     height: 200px;
