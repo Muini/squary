@@ -126,8 +126,7 @@
     &lt;article class="child"&gt;&lt;/article&gt;
 &lt;/section&gt;</code></pre></p>
             <p>Alright for the HTML part, then you need to setup with JavaScript like following :</p>
-<p><pre><code class="language-javascript">var squaryGrid = Object.create(Squary);
-squaryGrid.new(
+<p><pre><code class="language-javascript">var squaryGrid = Squary.new(
     ".my-container", //   Container class
     6,             //   Resolution
     false,          //   Randomize
@@ -145,7 +144,7 @@ squaryGrid.new(
                 <li><b>Callback :</b> Function that will be called at the end of the initialisation of the grid.</li>
             </ul>
             <p>Of course you can setup multiple grid in your page.</p>
-            <p class="note"><b>Note :</b> Each block has a width and a height setup with JavaScript, so be careful with the content.</p>
+            <p class="note"><b>Note :</b> Each block has a width and a height setup with JavaScript and there is no overflow:hidden by default, so be careful with the content.</p>
             <p class="center"><b>At this moment, your grid will already work !</b></p>
 
             <h3>Attributes</h3>
@@ -159,7 +158,7 @@ squaryGrid.new(
 
             <h3>Methods</h3>
             <p>Let's see now, how we can interact with all this.</p>
-            <p>The method are called on an Squary instance only. Create one like this : <pre><code class="language-javascript">var calledLikeYouWant = Object.create(Squary);</code></pre></p>
+            <p>The method are called on an Squary instance only. Create one like this : <pre><code class="language-javascript">var calledLikeYouWant = Squary.new(parameters);</code></pre></p>
             <ul>
                 <li><b><pre>.new(String container,
             int resolution,
@@ -202,8 +201,7 @@ squaryGrid.new(
     <script type="text/javascript" src="js/squary.min.js"></script>
     <script type="text/javascript">
 
-        var squaryGrid = Object.create(Squary);
-        squaryGrid.new(
+        var squaryGrid = Squary.new(
             ".news_wall", //Container class | only one !
             12, //Resolution
             false, //Randomize

@@ -64,7 +64,6 @@ var Squary = {
             this.elements[i].style.position = "absolute";
             this.elements[i].style.top = 0;
             this.elements[i].style.left = 0;
-            this.elements[i].style.overflow = "hidden";
             this.elements[i].style.display = "none";
         }
 
